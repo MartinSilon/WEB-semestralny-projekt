@@ -28,6 +28,10 @@ body {
   margin: 0;
 }
 
+p {
+  color: #555555;
+}
+
 * {
   font-family: "Roboto", sans-serif;
 }
@@ -53,7 +57,7 @@ body {
   font-size: 6em;
 }
 .header__text .header__title--special {
-  color: #ff9301;
+  color: #a2d2ff;
 }
 .header__text__description {
   margin-top: 1em;
@@ -69,6 +73,9 @@ body {
 .header__menu-item {
   list-style: none;
   font-size: 0.9em;
+}
+.header__menu-item a {
+  text-decoration: none;
   color: #555555;
 }
 .header__image-container {
@@ -85,7 +92,7 @@ body {
   border-radius: 50%;
   top: -8rem;
   right: -12rem;
-  background-color: #ff9301;
+  background-color: #a2d2ff;
   opacity: 0.45;
   z-index: 0;
 }
@@ -102,6 +109,9 @@ main {
 
 .section-border {
   display: flex;
+  background-image: url("Components/photos/border-dark.png");
+  background-repeat: repeat;
+  background-size: contain;
 }
 
 .section {
@@ -113,6 +123,7 @@ main {
 .section-title {
   font-size: 1.8em;
   font-weight: 900;
+  color: #0b0b15;
   position: relative;
 }
 .section-title::before {
@@ -124,7 +135,7 @@ main {
   padding: 20px;
   top: -0.2rem;
   left: -0.5rem;
-  background-color: #ff9301;
+  background-color: #a2d2ff;
 }
 
 .section--biography .section__profile {
@@ -134,7 +145,7 @@ main {
   justify-content: center;
 }
 .section--biography .section__picture-wrapper {
-  background-color: #ff9301;
+  background-color: #a2d2ff;
   overflow-x: hidden;
   width: 240px;
   height: 240px;
@@ -152,7 +163,7 @@ main {
 .section--biography .section__job {
   font-size: 1em;
   font-weight: 400;
-  color: #ff9301;
+  color: #a2d2ff;
   margin: 0;
 }
 .section--biography .section__text {
@@ -181,7 +192,7 @@ main {
   top: -70px;
   left: -50px;
   z-index: 3;
-  background-color: #ff9301;
+  background-color: #a2d2ff;
   border-radius: 50%;
   height: 180px;
   width: 180px;
@@ -228,22 +239,26 @@ main {
 
 .section--experience {
   margin-bottom: 0;
-  padding-top: 2rem;
+  padding-top: 1rem;
   background-color: white;
   padding-bottom: 10px;
 }
 .section--experience .section__card {
   margin-bottom: 10px;
-  padding: 50px 40px;
+  padding: 20px 40px;
   border-radius: 1rem;
   background-color: #f7f7ff;
   display: grid;
-  grid-template-columns: 1fr 3fr;
+  grid-template-columns: 0.5fr 2.25fr;
 }
 .section--experience .section__card .section__card-side {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+.section--experience .section__card .section__card-side.border-right-side {
+  padding-left: 50px;
+  border-left: #eeeeee 1px solid;
 }
 .section--experience .section__card .section__card-side .section__card-text {
   margin: 0;
@@ -254,7 +269,7 @@ main {
 }
 .section--experience .section__card .section__card-side .section__card-text--primary {
   color: white;
-  background-color: #ff9301;
+  background-color: #a2d2ff;
   width: max-content;
   padding: 5px;
   border-radius: 0.5rem;
@@ -304,16 +319,15 @@ footer {
 }
 
 .footer {
-  padding-top: 4vw;
   margin-bottom: 0;
   line-height: 1.5;
 }
-.footer .footer__title {
-  margin-left: 4vw;
+.footer .section-title {
+  margin: 0px;
 }
 .footer .footer__content {
-  padding: 4vw;
-  padding-top: 0;
+  padding-top: 0vw;
+  padding-bottom: 4vw;
   align-items: center;
   gap: 10px;
 }
@@ -355,7 +369,7 @@ footer {
   max-width: 100%;
   padding: 10px;
   border-radius: 0;
-  border: 1px solid #555555;
+  border: 1px solid #bbbbbb;
 }
 .footer .footer__content .footer__form button {
   width: 30%;
@@ -363,10 +377,12 @@ footer {
   background-color: #0b0b15;
   color: #f7f7ff;
 }
+.footer .google-map {
+  filter: grayscale(100%);
+  margin-bottom: 2rem;
+}
 
 .footer__copyright {
-  padding-left: 2vw;
-  padding-right: 2vw;
   background-color: white;
   display: flex;
   justify-content: space-between;
@@ -483,7 +499,7 @@ footer {
   }
   .header .header__menu li {
     text-align: center;
-    background-color: #ff9301;
+    background-color: #a2d2ff;
     padding: 10px;
     color: black;
   }
