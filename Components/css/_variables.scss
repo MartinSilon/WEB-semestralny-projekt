@@ -27,7 +27,55 @@ $font-size-small:     .9em;
 
 $line-height-base:    1.5;
 
+
+// GAP
+$default-gap: 2em;
+$small-gap: 1em;
+$mini-gap: .5em;
+
+
+// BREAKPOINTS
+$bp-lg-min: 1200px;
+$bp-md-max: 959px;
+$bp-md-min: 560px;
+$bp-sm-max: 559px;
+$bp-xs-min: 360px;
+
+
+
+// MIXINS
 @mixin title {
   font-weight: $font-weight-bold;
   color: $title;
+  line-height: $line-height-base;
 }
+
+@mixin text {
+  line-height: $line-height-base;
+  color: $text;
+}
+
+@mixin flex-center($direction: row, $align-items: center, $justify-content: center) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
+
+
+@mixin shape-before($size, $top, $left: null, $right: null, $opacity: .3,) {
+  &::before {
+    content: '';
+    position: absolute;
+    padding: $size;
+    background-color: $primaryColor;
+    border-radius: $radius-round;;
+    opacity: $opacity;
+    z-index: 0;
+    @if $left  != null { left:  $left; }
+    @if $right != null { right: $right; }
+    top: $top;
+  }
+}
+
+

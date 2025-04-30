@@ -3,8 +3,8 @@
 }
 
 p, span {
-  color: #555555;
   line-height: 1.5;
+  color: #555555;
 }
 
 main {
@@ -43,23 +43,25 @@ main {
   font-size: 2em;
   font-weight: 900;
   color: #0b0b15;
+  line-height: 1.5;
   position: relative;
 }
 .section-title::before {
-  opacity: 0.3;
-  position: absolute;
-  width: 0;
-  border-radius: 50%;
   content: "";
+  position: absolute;
   padding: 0.625em;
-  top: -0.2em;
-  left: -0.5em;
   background-color: #a2d2ff;
+  border-radius: 50%;
+  opacity: 0.3;
+  z-index: 0;
+  left: -0.5em;
+  top: -0.2em;
 }
 
 .special-title {
   font-weight: 900;
   color: #0b0b15;
+  line-height: 1.5;
   margin: 0;
 }
 .special-title__small {
@@ -119,15 +121,15 @@ main {
   width: 50%;
 }
 .hero__media::before {
+  content: "";
+  position: absolute;
+  padding: 20em;
   background-color: #a2d2ff;
   border-radius: 50%;
-  content: "";
   opacity: 0.45;
-  padding: 20em;
-  position: absolute;
+  z-index: 0;
   right: -12em;
   top: -8em;
-  z-index: 0;
 }
 .hero__image {
   height: 24em;
@@ -140,20 +142,21 @@ main {
   gap: 2em;
 }
 .side-image-layout__media {
-  align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 .side-image-layout__media-wrapper {
-  align-items: flex-end;
   background-color: #a2d2ff;
   border-radius: 50%;
   display: flex;
-  height: 15em;
+  flex-direction: row;
   justify-content: center;
-  overflow-x: hidden;
+  align-items: flex-end;
+  height: 15em;
   width: 15em;
+  overflow-x: hidden;
 }
 .side-image-layout__media-wrapper .side-image-layout__image {
   height: 220px;
@@ -163,6 +166,7 @@ main {
   font-size: 2em;
   font-weight: 900;
   color: #0b0b15;
+  line-height: 1.5;
 }
 .side-image-layout__side-title {
   color: #a2d2ff;
@@ -212,6 +216,7 @@ main {
 .card-extended__title {
   font-weight: 900;
   color: #0b0b15;
+  line-height: 1.5;
 }
 .card-extended__text {
   font-size: 0.9em;
@@ -220,12 +225,12 @@ main {
 }
 
 .card-small {
-  align-items: center;
-  background-color: white;
-  border-radius: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 1rem;
   padding: 2.5em;
   width: auto;
 }
@@ -261,6 +266,7 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 .card-split__side--right {
   border-left: 1px solid #eeeeee;
@@ -287,6 +293,7 @@ main {
 .card-split__title {
   font-weight: 900;
   color: #0b0b15;
+  line-height: 1.5;
 }
 .card-split__text {
   margin: 0;
@@ -335,7 +342,9 @@ main {
 .site-footer {
   background: white;
   display: flex;
+  flex-direction: row;
   justify-content: center;
+  align-items: center;
 }
 .site-footer__container {
   align-items: center;
