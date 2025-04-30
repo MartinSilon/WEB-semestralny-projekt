@@ -1,9 +1,33 @@
 
-
-$orange: #a2d2ff;
+// COLORS
+$primaryColor: #a2d2ff;
 $title: #0b0b15;
 $text: #555555;
 
-$grey: #bbbbbb;
-$lightgrey: #eeeeee;
-$white: #f7f7ff;
+$neutral:        #bbbbbb;
+$neutral-light:  #eeeeee;
+$surface:        #f7f7ff;
+
+
+// RADIUS
+$radius-card: 1rem;
+$radius-round: 50%;
+$radius-badge: .5rem;
+$radius-none: 0;
+
+
+// FONT-WEIGHT
+$font-weight-bold: 900;
+$font-weight-regular: 400;
+
+// FONT-SIZE
+$font-size-huge:      6em;
+$font-size-large:     2em;
+$font-size-small:     .9em;
+
+$line-height-base:    1.5;
+
+@mixin title {
+  font-weight: $font-weight-bold;
+  color: $title;
+}
